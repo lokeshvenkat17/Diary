@@ -21,7 +21,7 @@ namespace Diary.App.Data
                     Id = 1,
                     Title = "Went Hiking",
                     Content = "Went hiking with Aishu",
-                    Created = DateTime.Now
+                    Created = new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9220)
                 },
 
                 new DiaryEntry
@@ -29,7 +29,7 @@ namespace Diary.App.Data
                     Id = 2,
                     Title = "Went Shopping",
                     Content = "Went shopping with Aishu",
-                    Created = DateTime.Now
+                    Created = new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9542)
                 },
 
                 new DiaryEntry
@@ -37,7 +37,7 @@ namespace Diary.App.Data
                     Id = 3,
                     Title = "Went Diving",
                     Content = "Went diving with Aishu",
-                    Created = DateTime.Now
+                    Created = new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9544)
                 });
         }
     }
