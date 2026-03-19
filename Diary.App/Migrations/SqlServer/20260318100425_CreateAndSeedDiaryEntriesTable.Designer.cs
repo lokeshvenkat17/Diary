@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Diary.App.Migrations
+namespace Diary.App.Migrations.SqlServer
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260317052339_AddedSeedingDataDiaryEntry")]
-    partial class AddedSeedingDataDiaryEntry
+    [Migration("20260318100425_CreateAndSeedDiaryEntriesTable")]
+    partial class CreateAndSeedDiaryEntriesTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

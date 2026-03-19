@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Diary.App.Migrations
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace Diary.App.Migrations.SqlServer
 {
     /// <inheritdoc />
-    public partial class CreateDiaryDbAndDiaryEntryTable : Migration
+    public partial class CreateAndSeedDiaryEntriesTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +26,16 @@ namespace Diary.App.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DiaryEntries", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "DiaryEntries",
+                columns: new[] { "Id", "Content", "Created", "Title" },
+                values: new object[,]
+                {
+                    { 1, "Went hiking with Aishu", new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9220), "Went Hiking" },
+                    { 2, "Went shopping with Aishu", new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9542), "Went Shopping" },
+                    { 3, "Went diving with Aishu", new DateTime(2026, 3, 17, 10, 53, 38, 700, DateTimeKind.Local).AddTicks(9544), "Went Diving" }
                 });
         }
 
